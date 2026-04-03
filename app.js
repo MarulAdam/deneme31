@@ -100,7 +100,8 @@ app.post('/', async (req, res) => {
 
         // 4. Dosyayı kullanıcıya indirt
         res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        res.setHeader('Content-Disposition', `attachment; filename=${kategori}_${konum}_sonuclar.xlsx`);
+        res.setHeader('Content-Disposition', `attachment; filename="b2b_isletme_verileri_${Date.now()}.xlsx"`);
+
 
         await workbook.xlsx.write(res);
         res.end();
