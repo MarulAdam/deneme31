@@ -6,7 +6,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true })); // Form verilerini okumak için
 
 // ÖNEMLİ: Google Cloud Console'dan alacağınız Places API anahtarınızı buraya girin.
-const GOOGLE_API_KEY = "BURAYA_KENDI_API_ANAHTARINIZI_YAZIN";
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+
 
 const HTML_SABLON = `
 <!DOCTYPE html>
